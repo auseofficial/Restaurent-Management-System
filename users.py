@@ -17,7 +17,7 @@ class Customer(User):
     def __init__(self, name, money):
         super().__init__(name)
         self.money = money
-        self.__order = None  # Initialize as None
+        self.__order = None  
 
     @property
     def order(self):
