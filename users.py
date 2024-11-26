@@ -1,12 +1,15 @@
 from abc import ABC, abstractmethod
 
 class User(ABC):
-    def __init__(self, name):
+    def __init__(self, name,phone,email,address):
         self.name = name
+        self.phone=phone
+        self.email=email
+        self.address=address
 
 class Customer(User):
-    def __init__(self, name, money):
-        super().__init__(name)
+    def __init__(self, name,phone,email,address,money):
+        super().__init__(name,phone,email,address)
         self.money = money
         self.__order = None
 
@@ -30,3 +33,23 @@ class Customer(User):
 
     def write_review(self, stars):
         print(f"{self.name} gave a review with {stars} stars")
+        
+        
+class Employee(User):
+    def __init__(self,name,phone,email,address,salary,starting_date):
+        super().__init__(name,phone,email,address)
+        self.salary=salary
+        self.starting_date=starting_date
+
+class Chef(Employee):
+    def __init__(self,name,phone,email,address,salary,starting_date,cooking_item):
+        super().__init__(name,phone,email,address,salary,starting_date)
+        self.cooking_item=cooking_item
+        
+class Manager(Employee):
+    def __init__(self,name,phone,email,address,salary,starting_date,department):
+        super().__init__(name,phone,email,address,salary,starting_date)
+        self.department=department
+        
+
+            
