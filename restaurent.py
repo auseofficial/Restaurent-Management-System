@@ -7,7 +7,7 @@ class Restaurant:
         self.menu = []
         self.revenue = 0
         self.profit = 0
-
+ 
     def add_employee(self, employee_type, employee):
         if employee_type == 'chef':
             self.chef = employee
