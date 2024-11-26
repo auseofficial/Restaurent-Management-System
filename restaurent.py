@@ -28,5 +28,6 @@ class Restaurant:
             self.expense += amount
             self.balance -=amount
             print(f'Expense{amount} for {description}')
-            
+        else:
+            print(f'Not enough money to pay {amount}')    
             
