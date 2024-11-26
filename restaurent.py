@@ -24,4 +24,9 @@ class Restaurant:
             return amount - order.bill
         
     def pay_expense(self,amount,description):
-        if amount
+        if amount < self.balance:
+            self.expense += amount
+            self.balance -=amount
+            print(f'Expense{amount} for {description}')
+            
+            
