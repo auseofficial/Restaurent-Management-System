@@ -15,3 +15,13 @@ class Restaurant:
             self.server = employee  
         elif employee_type == 'manager':
             self.manager = employee  
+            
+    def recieve_payment(self,order,amount,customer):
+        if amount>=order.bill:
+            self.revenue+=order.bill
+            self.balance +=order.bill
+            customer.due_amount=0
+            return amount - order.bill
+        
+    def pay_expense(self,amount,description):
+        if amount
