@@ -16,6 +16,9 @@ class Restaurant:
         elif employee_type == 'manager':
             self.manager = employee  
             
+    def recieve_salary(self):
+        self.due=0        
+            
     def recieve_payment(self,order,amount,customer):
         if amount>=order.bill:
             self.revenue+=order.bill
@@ -30,4 +33,7 @@ class Restaurant:
             print(f'Expense{amount} for {description}')
         else:
             print(f'Not enough money to pay {amount}')    
-            
+       
+    def pay_salary(self,employee):
+        if employee.salary < self.balance:
+            employee.recieve_salary()
