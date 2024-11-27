@@ -18,3 +18,5 @@ def main():
     menu.add_menu_item('drinks',coke)
     coffee=Drinks('Mocha',50,False)
     menu.add_menu_item('drinks',coke)
+    
+    
