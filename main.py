@@ -1,4 +1,5 @@
 from menu import Pizza, Burger, Drinks, Menu
+from Restaurant import Restaurant
 
 def main():
     # Create a menu object
@@ -26,6 +27,9 @@ def main():
 
     # Display menu
     menu.show_menu()
+    
+    # Create a restaurant object
+    restaurant = Restaurant("Bangla Hotel", menu)
 
 if __name__ == "__main__":
     main()

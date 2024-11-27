@@ -1,6 +1,7 @@
 class Restaurant:
-    def __init__(self, name, menu, chef=None, server=None, manager=None):
+    def __init__(self, name, rent, menu, chef=None, server=None, manager=None):
         self.name = name
+        self.rent=rent
         self.menu = menu
         self.chef = chef
         self.server = server
