@@ -39,3 +39,5 @@ class Restaurant:
         if employee.salary <= self.balance:
             self.balance -= employee.salary
             employee.receive_salary()
+            
+            
