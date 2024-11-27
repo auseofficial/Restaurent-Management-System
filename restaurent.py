@@ -1,14 +1,15 @@
 class Restaurant:
-    def __init__(self, name, chef, server, manager):
+    def __init__(self, name, menu, chef, server, manager):
+        # Initialize the restaurant's name and key attributes
         self.name = name
+        self.menu = menu  # Correctly accept `menu` from arguments
         self.chef = chef
         self.server = server
         self.manager = manager
-        self.menu = []
-        self.revenue = 0
-        self.profit = 0
-        self.balance = 0  # Missing initialization
-        self.expense = 0  # Missing initialization
+        self.revenue = 0  # Initialize revenue to 0
+        self.expense = 0  # Initialize expense to 0
+        self.balance = 0  # Initialize balance to 0
+
  
     def add_employee(self, employee_type, employee):
         if employee_type == 'chef':
