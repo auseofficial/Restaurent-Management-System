@@ -40,4 +40,3 @@ class Restaurant:
             self.balance -= employee.salary
             employee.receive_salary()
             
-            
