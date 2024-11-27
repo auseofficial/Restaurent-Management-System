@@ -14,4 +14,7 @@ def main():
     burger_2=Burger('beef burger',600,'large',['beef','onion'])
     menu.add_menu_item('burger',burger_1)
     
-    coke=
+    coke=Drinks('coke',50,True)
+    menu.add_menu_item('drinks',coke)
+    coffee=Drinks('Mocha',50,False)
+    menu.add_menu_item('drinks',coke)
