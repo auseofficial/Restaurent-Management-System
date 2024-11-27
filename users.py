@@ -50,6 +50,3 @@ class Manager(Employee):
     def __init__(self,name,phone,email,address,salary,starting_date,department):
         super().__init__(name,phone,email,address,salary,starting_date)
         self.department=department
-        
-
-            
