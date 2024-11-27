@@ -1,22 +1,31 @@
-from menu import Pizza, Burger,Drinks,Menu
+from menu import Pizza, Burger, Drinks, Menu
 
 def main():
-    menu=Menu()
-    pizza_1=Pizza('chicken pizza',600,'large',['chicken','onion'])
-    menu.add_menu_item('pizza'.pizza_1)
-    pizza_2=Pizza('cheese pizza',600,'large',['cheese','onion'])
-    menu.add_menu_item('pizza'.pizza_2)
-    pizza_3=Pizza('meat pizza',600,'large',['meat','onion'])
-    menu.add_menu_item('pizza'.pizza_3)
+    # Create a menu object
+    menu = Menu()
     
-    burger_1=Burger('chicken burger',600,'large',['chicken','onion'])
-    menu.add_menu_item('burger',burger_1)
-    burger_2=Burger('beef burger',600,'large',['beef','onion'])
-    menu.add_menu_item('burger',burger_1)
-    
-    coke=Drinks('coke',50,True)
-    menu.add_menu_item('drinks',coke)
-    coffee=Drinks('Mocha',50,False)
-    menu.add_menu_item('drinks',coke)
-    
-    
+    # Add pizzas
+    pizza_1 = Pizza('chicken pizza', 600, False)
+    menu.add_menu_item('pizza', pizza_1)
+    pizza_2 = Pizza('cheese pizza', 500, False)
+    menu.add_menu_item('pizza', pizza_2)
+    pizza_3 = Pizza('meat pizza', 700, False)
+    menu.add_menu_item('pizza', pizza_3)
+
+    # Add burgers
+    burger_1 = Burger('chicken burger', 350, 'chicken', ['chicken', 'lettuce'])
+    menu.add_menu_item('burger', burger_1)
+    burger_2 = Burger('beef burger', 400, 'beef', ['beef', 'cheese'])
+    menu.add_menu_item('burger', burger_2)
+
+    # Add drinks
+    coke = Drinks('Coke', 50, False)
+    menu.add_menu_item('drinks', coke)
+    coffee = Drinks('Mocha', 80, True)
+    menu.add_menu_item('drinks', coffee)
+
+    # Display menu
+    menu.show_menu()
+
+if __name__ == "__main__":
+    main()
