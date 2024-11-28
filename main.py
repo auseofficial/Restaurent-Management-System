@@ -31,6 +31,6 @@ def main():
     
     # Create a restaurant object
     restaurant = Restaurant("Bangla Hotel", menu)
-
+ 
 if __name__ == "__main__":
     main()
