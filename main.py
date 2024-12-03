@@ -28,7 +28,6 @@ def main():
 
     # Display menu
     menu.show_menu()
-    
     # Create a restaurant object
     restaurant = Restaurant("Bangla Hotel", menu)
  
