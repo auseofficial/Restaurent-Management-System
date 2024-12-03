@@ -7,7 +7,6 @@ total = num1 + num2
 # Print the result
 print("The sum is:", total)
 
-
 num=input("Write a number :")
 num=int(num)
 
