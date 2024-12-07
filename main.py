@@ -31,9 +31,14 @@ def main():
     menu.show_menu()
 
     # Create a restaurant object
-    restaurant = Restaurant("Bangla Hotel", 1000, menu)  # Added rent value
-    # Create a restaurant object
-    restaurant = Restaurant("Bangla Hotel", menu)
+    restaurant = Restaurant("Bangla Hotel", 1000, menu)  # Ensure rent value is included
+
+    # Example: Add employee
+    chef = Chef("John Doe", "1234567890", "chef@restaurant.com", "123 Street", 5000, "2024-01-01", ["Pizza", "Burger"])
+    restaurant.add_employee('chef', chef)
+
+    # print(f"Restaurant {restaurant.name} is successfully set up!")
+
 
 if __name__ == "__main__":
     main()

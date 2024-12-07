@@ -36,7 +36,7 @@ class Restaurant:
         else:
             print(f'Not enough money to pay {amount}')
 
-def pay_salary(self, employee):
+    def pay_salary(self, employee):
         if employee.salary <= self.balance:
             self.balance -= employee.salary
             employee.receive_salary()
