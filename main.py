@@ -1,6 +1,6 @@
 from menu import Pizza, Burger, Drinks, Menu
 from restaurent import Restaurant
-from users import Chef, Customer
+from users import Chef, Customer, Server
 
 
 def main():
