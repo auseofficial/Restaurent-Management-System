@@ -11,7 +11,6 @@ class Menu:
             for item in items:
                 print(f" - {item.name} (${item.price})")
 
-
 class Food:
     def __init__(self, name, price):
         self.name = name
