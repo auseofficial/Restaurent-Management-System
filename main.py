@@ -29,15 +29,11 @@ def main():
 
     # Display menu
     menu.show_menu()
-<<<<<<< HEAD
 
     # Create a restaurant object
     restaurant = Restaurant("Bangla Hotel", 1000, menu)  # Added rent value
-
-=======
     # Create a restaurant object
     restaurant = Restaurant("Bangla Hotel", menu)
- 
->>>>>>> 65448ad84a0d92eef88119cb989dec7218aa130f
+
 if __name__ == "__main__":
     main()
