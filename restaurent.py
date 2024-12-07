@@ -34,17 +34,9 @@ class Restaurant:
             self.balance -= amount
             print(f'Expense {amount} for {description}')
         else:
-<<<<<<< HEAD
             print(f'Not enough money to pay {amount}')
 
-=======
-            print(f'Not enough money to pay {amount}')    
->>>>>>> 65448ad84a0d92eef88119cb989dec7218aa130f
-    def pay_salary(self, employee):
+def pay_salary(self, employee):
         if employee.salary <= self.balance:
             self.balance -= employee.salary
             employee.receive_salary()
-<<<<<<< HEAD
-=======
-            
->>>>>>> 65448ad84a0d92eef88119cb989dec7218aa130f
