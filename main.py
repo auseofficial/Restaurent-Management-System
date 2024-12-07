@@ -1,11 +1,12 @@
 from menu import Pizza, Burger, Drinks, Menu
-from Restaurant import Restaurant
-from Users import Chef,Customer,Server
+from restaurent import Restaurant
+from users import Chef, Customer
+
 
 def main():
     # Create a menu object
     menu = Menu()
-    
+
     # Add pizzas
     pizza_1 = Pizza('chicken pizza', 600, False)
     menu.add_menu_item('pizza', pizza_1)
@@ -28,11 +29,9 @@ def main():
 
     # Display menu
     menu.show_menu()
-    
+
     # Create a restaurant object
-    restaurant = Restaurant("Bangla Hotel", menu)
+    restaurant = Restaurant("Bangla Hotel", 1000, menu)  # Added rent value
 
 if __name__ == "__main__":
     main()
-    
- 

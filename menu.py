@@ -11,10 +11,12 @@ class Menu:
             for item in items:
                 print(f" - {item.name} (${item.price})")
 
+
 class Food:
     def __init__(self, name, price):
         self.name = name
         self.price = price
+
 
 class Burger(Food):
     def __init__(self, name, price, meat, ingredients):
@@ -22,10 +24,12 @@ class Burger(Food):
         self.meat = meat
         self.ingredients = ingredients
 
+
 class Pizza(Food):
     def __init__(self, name, price, is_cold=False):
         super().__init__(name, price)
         self.is_cold = is_cold
+
 
 class Drinks(Food):
     def __init__(self, name, price, is_hot=False):

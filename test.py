@@ -18,26 +18,26 @@
 
 #inheritance
 
-class Animal:
-    def __init__(self,name,color):
-        self.name=name
-        self.color=color
+# class Animal:
+#     def __init__(self,name,color):
+#         self.name=name
+#         self.color=color
         
-class Dog:
-    def __init__(self,eat):
-        self.eat=eat
+# class Dog:
+#     def __init__(self,eat):
+#         self.eat=eat
        
-class Don(Animal,Dog):
-    def __init__(self,name,color,pamp):
-     super().__init__(name,color)
-     self.pamp=pamp
+# class Don(Animal,Dog):
+#     def __init__(self,name,color,pamp):
+#      super().__init__(name,color)
+#      self.pamp=pamp
 
-obj1=Animal("foggy","black")     
-obj2=Dog("meat")
-obj3=Don("foggy","black","pampi")
-print(obj1.name)                   
-print(obj2.eat)
-print(obj3.pamp)
+# obj1=Animal("foggy","black")     
+# obj2=Dog("meat")
+# obj3=Don("foggy","black","pampi")
+# print(obj1.name)                   
+# print(obj2.eat)
+# print(obj3.pamp)
 
 """Encap"""
 
@@ -63,11 +63,10 @@ class Bank:
         else:
             self._balance -= amount
             print(f"Withdrawn {amount} successfully.")
-            self.show_balance()
+            # self.show_balance()
 
     def show_balance(self):
         print(f"Current Balance: {self._balance}")
-        
         
     def showing_the_an(self):
         print(self.__account_number) 
@@ -80,3 +79,4 @@ print(obj1.name)
 print(obj1.showing_the_an()) 
 print(obj1.showing_the_blnc())    
 print(f"Direct access to protected balance: {obj1._balance}")
+print(obj1.showing_the_an())
