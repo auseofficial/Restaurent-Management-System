@@ -77,9 +77,9 @@ def main():
     # Ordered items with centered alignment and prices
     print("|{:^48}|".format("Ordered Items"))
     for item in ordered_items:
-        print(f"| {item.name.ljust(28)} - ${item.price:<14} |")
+     print(f"| {item.name.ljust(28)} - ${item.price:<14} |")
     print("=" * 50)
     print(f"| {'Total'.ljust(28)} : ${total_bill:<14} |")
-
+    print("=" * 50)
 if __name__ == "__main__":
     main()
