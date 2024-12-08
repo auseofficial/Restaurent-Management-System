@@ -2,7 +2,6 @@ from menu import Pizza, Burger, Drinks, Menu
 from restaurent import Restaurant
 from users import Customer
 
-
 def main():
     # Create a menu object
     menu = Menu()
@@ -42,7 +41,7 @@ def main():
     print("\nOrdering Food:")
     total_bill = 0
     ordered_items = []
-    print("Enter the numbers corresponding to the items you want to order (comma-separated):")
+    print("Enter the numbers corresponding to the items you want to order :")
     order_items = input("Your order: ").split(",")
 
     for item_number in order_items:
@@ -50,18 +49,12 @@ def main():
         if item_number in item_mapping:
             food_item = item_mapping[item_number]
             ordered_items.append(food_item)
-            # print(f"Added {food_item.name} - ${food_item.price} to the order.")
             total_bill += food_item.price
 
-    # Separator line without extra space
-    # print("_" * 20)
-    # print(f"Total Bill: ${total_bill}")
-
-    # Create a restaurant object
     restaurant = Restaurant("Bangla Hotel", 1000, menu)
 
     # Example Customer
-    customer = Customer("John Doe", "123456789", "john@example.com", "123 Street", 2000)
+    customer = Customer("Akib Us Suny Eshan", "123456789", "akib@example.com", "123 Street", 2000)
 
     # Generate Invoice
     print("\n" + "Invoice".center(40))
