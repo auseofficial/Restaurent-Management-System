@@ -41,6 +41,7 @@ def main():
     # Ordering food
     print("\nOrdering Food:")
     total_bill = 0
+    ordered_items = []
     print("Enter the numbers corresponding to the items you want to order (comma-separated):")
     order_items = input("Your order: ").split(",")
 
@@ -48,21 +49,34 @@ def main():
         item_number = item_number.strip()
         if item_number in item_mapping:
             food_item = item_mapping[item_number]
+            ordered_items.append(food_item)
             print(f"Added {food_item.name} - ${food_item.price} to the order.")
             total_bill += food_item.price
 
-    # Add the separator line before showing the total
-    print("\n" + "_" * 20)
+    # Separator line without extra space
+    print("_" * 20)
     print(f"Total Bill: ${total_bill}")
 
     # Create a restaurant object
     restaurant = Restaurant("Bangla Hotel", 1000, menu)
 
     # Example Customer
-    customer = Customer("Akib Us Suny Eshan", "123456789", "john@example.com", "123 Street", 2000)
+    customer = Customer("John Doe", "123456789", "john@example.com", "123 Street", 2000)
+
+    # Generate Invoice
     print("\nInvoice:")
+    print(f"{'-'*40}")
     print(f"Customer: {customer.name}")
+    print(f"Phone: {customer.phone}")
+    print(f"Email: {customer.email}")
+    print(f"Address: {customer.address}")
+    print(f"{'-'*40}")
+    print("Ordered Items:")
+    for item in ordered_items:
+        print(f" - {item.name} - ${item.price}")
+    print(f"{'-'*40}")
     print(f"Total Bill: ${total_bill}")
+    print(f"{'-'*40}")
 
 
 if __name__ == "__main__":
