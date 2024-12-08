@@ -23,12 +23,10 @@ class Burger(Food):
         self.meat = meat
         self.ingredients = ingredients
 
-
 class Pizza(Food):
     def __init__(self, name, price, is_cold=False):
         super().__init__(name, price)
         self.is_cold = is_cold
-
 
 class Drinks(Food):
     def __init__(self, name, price, is_hot=False):
