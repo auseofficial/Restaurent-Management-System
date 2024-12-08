@@ -1,3 +1,4 @@
+# Importing necessary modules
 from menu import Pizza, Burger, Drinks, Menu
 from restaurent import Restaurant
 from users import Customer
@@ -51,27 +52,34 @@ def main():
             ordered_items.append(food_item)
             total_bill += food_item.price
 
+    # Collecting customer details
+    print("\nEnter your details:")
+    name = input("Name: ")
+    phone = input("Phone: ")
+    email = input("Email: ")
+    address = input("Address: ")
+
+    # Create a Customer instance
+    customer = Customer(name, phone, email, address, 2000)  # Assuming a starting balance
+
     restaurant = Restaurant("Bangla Hotel", 1000, menu)
 
-    # Example Customer
-    customer = Customer("Akib Us Suny Eshan", "123456789", "akib@example.com", "123 Street", 2000)
-
     # Generate Invoice
-    print("\n" + "Invoice".center(40))
-    print(f"{'Customer'.ljust(15)} : {customer.name}")
-    print(f"{'Phone'.ljust(15)} : {customer.phone}")
-    print(f"{'Email'.ljust(15)} : {customer.email}")
-    print(f"{'Address'.ljust(15)} : {customer.address}")
-    print("_" * 40)
+    print("\n" + "=" * 50)
+    print("|{:^48}|".format("INVOICE"))
+    print("=" * 50)
+    print(f"| { 'Customer'.ljust(15)} : {customer.name.ljust(28)} |")
+    print(f"| { 'Phone'.ljust(15)} : {customer.phone.ljust(28)} |")
+    print(f"| { 'Email'.ljust(15)} : {customer.email.ljust(28)} |")
+    print(f"| { 'Address'.ljust(15)} : {customer.address.ljust(28)} |")
+    print("=" * 50)
 
-    # Ordered items with centered alignment
-    print(f"{'Ordered Items'.center(40)}")
+    # Ordered items with centered alignment and prices
+    print("|{:^48}|".format("Ordered Items"))
     for item in ordered_items:
-        print(f"{item.name.ljust(30)} - {item.price}")
-
-    print("_" * 40)
-    print(f"{'Total'.ljust(30)} : ${total_bill}")
-
+        print(f"| {item.name.ljust(28)} - ${item.price:<14} |")
+    print("=" * 50)
+    print(f"| {'Total'.ljust(28)} : ${total_bill:<14} |")
 
 if __name__ == "__main__":
     main()
