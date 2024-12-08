@@ -1,6 +1,6 @@
 from menu import Pizza, Burger, Drinks, Menu
 from restaurent import Restaurant
-from users import Chef, Customer, Server
+from users import Customer
 
 
 def main():
@@ -8,36 +8,53 @@ def main():
     menu = Menu()
 
     # Add pizzas
-    pizza_1 = Pizza('chicken pizza', 600, False)
-    menu.add_menu_item('pizza', pizza_1)
-    pizza_2 = Pizza('cheese pizza', 500, False)
-    menu.add_menu_item('pizza', pizza_2)
-    pizza_3 = Pizza('meat pizza', 700, False)
-    menu.add_menu_item('pizza', pizza_3)
+    menu.add_menu_item('pizza', Pizza('Chicken Pizza', 600, False))
+    menu.add_menu_item('pizza', Pizza('Cheese Pizza', 500, False))
+    menu.add_menu_item('pizza', Pizza('Meat Pizza', 700, False))
 
     # Add burgers
-    burger_1 = Burger('chicken burger', 350, 'chicken', ['chicken', 'lettuce'])
-    menu.add_menu_item('burger', burger_1)
-    burger_2 = Burger('beef burger', 400, 'beef', ['beef', 'cheese'])
-    menu.add_menu_item('burger', burger_2)
+    menu.add_menu_item('burger', Burger('Chicken Burger', 350, 'Chicken', ['Chicken', 'Lettuce']))
+    menu.add_menu_item('burger', Burger('Beef Burger', 400, 'Beef', ['Beef', 'Cheese']))
 
     # Add drinks
-    coke = Drinks('Coke', 50, False)
-    menu.add_menu_item('drinks', coke)
-    coffee = Drinks('Mocha', 80, True)
-    menu.add_menu_item('drinks', coffee)
+    menu.add_menu_item('drinks', Drinks('Coke', 50, False))
+    menu.add_menu_item('drinks', Drinks('Mocha', 80, True))
 
     # Display menu
+    print("\nMenu:")
     menu.show_menu()
 
     # Create a restaurant object
-    restaurant = Restaurant("Bangla Hotel", 1000, menu)  # Ensure rent value is included
+    restaurant = Restaurant("Bangla Hotel", 1000, menu)
 
-    # Example: Add employee
-    chef = Chef("John Doe", "1234567890", "chef@restaurant.com", "123 Street", 5000, "2024-01-01", ["Pizza", "Burger"])
-    restaurant.add_employee('chef', chef)
+    # Create a customer
+    customer = Customer("Akib Us Suny Eshan", "1234567890", "john@example.com", "123 Street", 2000)
 
-    # print(f"Restaurant {restaurant.name} is successfully set up!")
+    # Simulate ordering food
+    print("\nOrdering Food:")
+    total_bill = 0
+    print("Enter the numbers corresponding to the items you want to order (comma-separated):")
+    order_items = input("Your order: ").split(",")
+
+    for item in order_items:
+        item = item.strip()
+        if item.isdigit():
+            item_index = int(item) - 1
+            for category, items in menu.items.items():
+                if 0 <= item_index < len(items):
+                    food_item = items[item_index]
+                    print(f"Added {food_item.name} - ${food_item.price} to the order.")
+                    total_bill += food_item.price
+                    break
+
+    print(f"\nTotal Bill: ${total_bill}")
+
+    # Payment
+    customer.pay_for_order(total_bill)
+    restaurant.receive_payment(total_bill)
+
+    # Show restaurant summary
+    restaurant.show_summary()
 
 
 if __name__ == "__main__":

@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 
+
 class User(ABC):
     def __init__(self, name, phone, email, address):
         self.name = name
@@ -12,28 +13,13 @@ class Customer(User):
     def __init__(self, name, phone, email, address, money):
         super().__init__(name, phone, email, address)
         self.money = money
-        self.__order = None
-
-    @property
-    def order(self):
-        return self.__order
-
-    @order.setter
-    def order(self, order):
-        self.__order = order
-        print(f"{self.name} placed an order")
-
-    def eat_food(self, order):
-        print(f"{self.name} ordered and ate {order.items}")
 
     def pay_for_order(self, amount):
-        print(f"{self.name} paid ${amount}")
-
-    def give_tips(self, tips_amount):
-        print(f"{self.name} gave a tip of ${tips_amount}")
-
-    def write_review(self, stars):
-        print(f"{self.name} gave a review with {stars} stars")
+        if amount <= self.money:
+            self.money -= amount
+            print(f"{self.name} paid ${amount}")
+        else:
+            print(f"{self.name} does not have enough money to pay ${amount}")
 
 
 class Employee(User):
@@ -47,20 +33,12 @@ class Employee(User):
 
 
 class Chef(Employee):
-    def __init__(self, name, phone, email, address, salary, starting_date, cooking_item):
+    def __init__(self, name, phone, email, address, salary, starting_date, specialty):
         super().__init__(name, phone, email, address, salary, starting_date)
-        self.cooking_item = cooking_item
-
-
-class Manager(Employee):
-    def __init__(self, name, phone, email, address, salary, starting_date, department):
-        super().__init__(name, phone, email, address, salary, starting_date)
-        self.department = department
+        self.specialty = specialty
 
 
 class Server(Employee):
     def __init__(self, name, phone, email, address, salary, starting_date, serving_area):
-        super().__init__(name, phone, email, address)
-        self.salary = salary
-        self.starting_date = starting_date
+        super().__init__(name, phone, email, address, salary, starting_date)
         self.serving_area = serving_area
