@@ -50,12 +50,12 @@ def main():
         if item_number in item_mapping:
             food_item = item_mapping[item_number]
             ordered_items.append(food_item)
-            print(f"Added {food_item.name} - ${food_item.price} to the order.")
+            # print(f"Added {food_item.name} - ${food_item.price} to the order.")
             total_bill += food_item.price
 
     # Separator line without extra space
-    print("_" * 20)
-    print(f"Total Bill: ${total_bill}")
+    # print("_" * 20)
+    # print(f"Total Bill: ${total_bill}")
 
     # Create a restaurant object
     restaurant = Restaurant("Bangla Hotel", 1000, menu)
@@ -64,19 +64,20 @@ def main():
     customer = Customer("John Doe", "123456789", "john@example.com", "123 Street", 2000)
 
     # Generate Invoice
-    print("\nInvoice:")
-    print(f"{'-'*40}")
-    print(f"Customer: {customer.name}")
-    print(f"Phone: {customer.phone}")
-    print(f"Email: {customer.email}")
-    print(f"Address: {customer.address}")
-    print(f"{'-'*40}")
-    print("Ordered Items:")
+    print("\n" + "Invoice".center(40))
+    print(f"{'Customer'.ljust(15)} : {customer.name}")
+    print(f"{'Phone'.ljust(15)} : {customer.phone}")
+    print(f"{'Email'.ljust(15)} : {customer.email}")
+    print(f"{'Address'.ljust(15)} : {customer.address}")
+    print("_" * 40)
+
+    # Ordered items with centered alignment
+    print(f"{'Ordered Items'.center(40)}")
     for item in ordered_items:
-        print(f" - {item.name} - ${item.price}")
-    print(f"{'-'*40}")
-    print(f"Total Bill: ${total_bill}")
-    print(f"{'-'*40}")
+        print(f"{item.name.ljust(30)} - {item.price}")
+
+    print("_" * 40)
+    print(f"{'Total'.ljust(30)} : ${total_bill}")
 
 
 if __name__ == "__main__":
