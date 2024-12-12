@@ -20,7 +20,6 @@ def main():
     menu.add_menu_item('burger', burger_1)
     burger_2 = Burger('Beef Burger', 400, 'beef', ['beef', 'cheese'])
     menu.add_menu_item('burger', burger_2)
-
     # Add drinks
     coke = Drinks('Coke', 50, False)
     menu.add_menu_item('drinks', coke)
