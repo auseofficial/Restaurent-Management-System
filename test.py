@@ -15,7 +15,6 @@
 # else:
 #     print(num,"is odd")
 
-
 #inheritance
 
 # class Animal:
