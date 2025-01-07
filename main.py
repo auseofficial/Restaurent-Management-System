@@ -2,7 +2,6 @@
 from menu import Pizza, Burger, Drinks, Menu
 from restaurent import Restaurant
 from users import Customer
-
 def main():
     # Create a menu object
     menu = Menu()
