@@ -60,7 +60,6 @@ def main():
     customer = Customer(name, phone, email, address, 2000)  # Assuming a starting balance
 
     restaurant = Restaurant("Bangla Hotel", 1000, menu)
-
     # Generate Invoice
     print("\n" + "=" * 50)
     print("|{:^48}|".format("INVOICE"))
