@@ -33,7 +33,6 @@ def main():
             print(f"{index}. {item.name} - ${item.price}")
             item_mapping[str(index)] = item
             index += 1
-
     # Ordering food
     print("\nOrdering Food:")
     total_bill = 0
