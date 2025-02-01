@@ -22,7 +22,6 @@ def main():
     menu.add_menu_item('drinks', coke)
     coffee = Drinks('Mocha', 80, True)
     menu.add_menu_item('drinks', coffee)
-
     # Display menu with numbering
     print("\nMenu:")
     item_mapping = {}  # Maps numbers to food items
