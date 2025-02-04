@@ -45,7 +45,6 @@ def main():
             food_item = item_mapping[item_number]
             ordered_items.append(food_item)
             total_bill += food_item.price
-
     # Collecting customer details
     print("\nEnter your details:")
     name = input("Name: ")
