@@ -12,7 +12,7 @@ def main():
     menu.add_menu_item('pizza', pizza_2)
     pizza_3 = Pizza('Meat Pizza', 700, False)
     menu.add_menu_item('pizza', pizza_3)
-    # Add burgers
+    # Add burgers 
     burger_1 = Burger('Chicken Burger', 350, 'chicken', ['chicken', 'lettuce'])
     menu.add_menu_item('burger', burger_1)
     burger_2 = Burger('Beef Burger', 400, 'beef', ['beef', 'cheese'])
