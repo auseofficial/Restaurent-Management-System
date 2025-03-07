@@ -29,7 +29,6 @@ class Pizza(Food):
         super().__init__(name, price)
         self.is_cold = is_cold
 
-
 class Drinks(Food):
     def __init__(self, name, price, is_hot=False):
         super().__init__(name, price)
