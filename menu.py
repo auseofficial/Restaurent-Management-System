@@ -16,7 +16,6 @@ class Food:
         self.name = name
         self.price = price
 
-
 class Burger(Food):
     def __init__(self, name, price, meat, ingredients):
         super().__init__(name, price)
