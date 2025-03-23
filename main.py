@@ -38,7 +38,7 @@ def main():
     ordered_items = []
     print("Enter the numbers corresponding to the items you want to order :")
     order_items = input("Your order: ").split(",")
-
+ 
     for item_number in order_items:
         item_number = item_number.strip()
         if item_number in item_mapping:
