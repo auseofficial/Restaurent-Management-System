@@ -52,7 +52,7 @@ def main():
     phone = input("Phone: ")
     email = input("Email: ")
     address = input("Address: ")
-
+    
     # Create a Customer instance
     customer = Customer(name, phone, email, address, 2000)  # Assuming a starting balance
 
