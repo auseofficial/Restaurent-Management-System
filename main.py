@@ -5,7 +5,7 @@ from users import Customer
 def main():
 # Create a menu object 
     menu = Menu()
-    # Add pizzas
+    # Add pizzas 
     pizza_1 = Pizza('Chicken Pizza', 600, False)
     menu.add_menu_item('pizza', pizza_1)
     pizza_2 = Pizza('Cheese Pizza', 500, False)
