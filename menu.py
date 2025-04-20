@@ -1,7 +1,7 @@
 class Menu:
     def __init__(self):
         self.items = {"pizza": [], "burger": [], "drinks": []}
- 
+
     def add_menu_item(self, category, item):
         self.items.get(category, []).append(item)
         
