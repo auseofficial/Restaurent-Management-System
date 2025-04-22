@@ -4,7 +4,7 @@ class Menu:
 
     def add_menu_item(self, category, item):
         self.items.get(category, []).append(item)
-        
+    
     def show_menu(self):
         for category, items in self.items.items():
             print(f"\n{category.capitalize()}:")
