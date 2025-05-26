@@ -3,7 +3,7 @@ from menu import Pizza, Burger, Drinks, Menu
 from restaurent import Restaurant
 from users import Customer
 def main():
-# Create a menu object
+# Create a menu object 
     menu = Menu()
     # Add pizzas 
     pizza_1 = Pizza('Chicken Pizza', 600, False)
