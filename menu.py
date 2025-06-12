@@ -9,7 +9,7 @@ class Menu:
         for category, items in self.items.items():
             print(f"\n{category.capitalize()}:")
             for index, item in enumerate(items, 1):
-                print(f"{index}. {item.name} - ${item.price}")
+                print(f"{index}. {item.name} - ${item.price}") 
                 
 class Food:
     def __init__(self, name, price):
